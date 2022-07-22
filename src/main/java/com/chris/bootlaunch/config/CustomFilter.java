@@ -19,11 +19,11 @@ public class CustomFilter implements Filter {
     public void doFilter(ServletRequest servletRequest,
                          ServletResponse servletResponse,
                          FilterChain filterChain) throws IOException, ServletException {
-        log.info("customFilter 請求處理之前----doFilter方法之前過濾請求");
+        log.info("customFilter 請求處理之前----doFilter方法之前做過濾請求");
         servletRequest.setCharacterEncoding("UTF-8");
         filterChain.doFilter(servletRequest, servletResponse);
         servletResponse.setCharacterEncoding("UTF-8");
-        log.info("customFilter 請求處理之後----doFilter方法之後處理響應");
+        log.info("customFilter 請求處理之後----doFilter方法之後做處理響應");
     }
 
     @Override
