@@ -1,0 +1,43 @@
+server:
+  port: 8888
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+#    primary:
+      url: jdbc:mysql://localhost:3306/article?serverTimezone=Asia/Taipei&characterEncoding=utf-8
+      username: root
+      password: P@ssw0rd0326
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: validate
+#    database: mysql
+#    show-sql: true
+
+#    secondary:
+#      jdbc-url: jdbc:mysql://localhost:3306/article2?serverTimezone=Asia/Taipei&characterEncoding=utf-8
+#      username: root
+#      password: P@ssw0rd0326
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+family:
+  family-name: "happy family"
+  father:
+    name: Chris
+    age: 22
+  mother:
+    alias:
+      - cutebaby
+      - sweet
+  child:
+    name: ${family.family-name:June}
+    age: 13
+    friend:
+      - hobby: playpiano
+        gander: female
+      - hobby: playbasketball
+        gander: male
