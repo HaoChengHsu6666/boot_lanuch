@@ -23,6 +23,10 @@ spring:
 #      password: P@ssw0rd0326
 #      driver-class-name: com.mysql.cj.jdbc.Driver
 
+context:
+  listener:
+    classes: com.chris.bootlaunch.config.event.MyListener3
+
 
 family:
   family-name: "happy family"

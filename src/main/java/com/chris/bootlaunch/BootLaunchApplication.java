@@ -1,9 +1,11 @@
 package com.chris.bootlaunch;
 
+import com.chris.bootlaunch.config.event.MyListener1;
 import com.chris.bootlaunch.model.LombokPOJO;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
@@ -19,9 +21,9 @@ public class BootLaunchApplication {
 //                .age(23)
 //                .build();
 
-        SpringApplication.run(BootLaunchApplication.class, args
+        ConfigurableApplicationContext context = SpringApplication.run(BootLaunchApplication.class, args);
+        context.addApplicationListener(new MyListener1()) ;
 
-        );
     }
 
 }
