@@ -10,7 +10,7 @@ import org.springframework.core.annotation.Order;
 import java.util.Arrays;
 
 @Configuration
-public class BeanRunner {
+public class BeanRunner<ori> {
 
     // ApplicationRunner執行優先大於CommandLineRunner
 
@@ -24,6 +24,7 @@ public class BeanRunner {
             }
         };
     }
+
 
     @Bean
     @Order(2)
